@@ -2,7 +2,7 @@
 
 Submitted by: **Atuh Fon**
 
-This web app: **insert description**
+This web app: **is a fun and interactive app that allows users to create, view, edit, and delete custom Pokémon-inspired "crewmates." Users can give each crewmate a name, nickname, category, level, and a visual sprite. All entries are stored in Supabase and rendered dynamically through React, creating a smooth, real-time experience.**
 
 Time spent: **8** hours spent in total
 
@@ -49,14 +49,17 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='PokéFusion.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![Video Walkthrough](PokéFusion.gif)
 
 GIF created with:
 - [EzGIF](https://ezgif.com/) for Windows
 
 ## Challenges
 
-Describe any challenges encountered while building the app.
+- Configuring Supabase permissions and table structure correctly took some trial and error
+- Making sure image URLs and types parsed correctly when submitted as strings (especially for types)
+- Styling dynamically based on Pokémon type while maintaining a readable and clean layout
+- Handling page reloads and keeping consistent state from Supabase without duplicates or stale data
 
 ## License
 
