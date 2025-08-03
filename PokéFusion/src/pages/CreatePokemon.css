@@ -1,0 +1,174 @@
+/* CreatePokemon.css */
+.create-pokemon-container {
+  width: 850px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #2c3e50;
+  border-radius: 15px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.create-pokemon-container h2 {
+  text-align: center;
+  color: #ffde00;
+  margin-bottom: 2rem;
+  margin-top: 0rem;
+  font-size: 3rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-weight: 600;
+  font-size: 2rem;
+  color: #ffde00;
+}
+
+input {
+  padding: 1rem;
+  border: 2px solid #3b4cca;
+  border-radius: 8px;
+  font-size: 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #ffde00;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.5rem;
+}
+
+.submit-btn {
+  padding: 1rem;
+  background-color: #ffde00;
+  color: #2c3e50;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background-color: #f5d000;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .create-pokemon-container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Loading and Error States */
+.loading-container, .error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  text-align: center;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(255, 222, 0, 0.2);
+  border-radius: 50%;
+  border-top: 4px solid #ffde00;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-message {
+  color: #ff6b6b;
+  margin-bottom: 1.5rem;
+}
+
+.back-btn {
+  padding: 0.8rem 1.5rem;
+  background-color: #3b4cca;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #2a3a9c;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.cancel-btn {
+  padding: 1rem;
+  color: #ffde00;
+  background-color: #3b4cca;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  flex: 1;
+  padding: 1rem;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.cancel-btn:hover {
+  background-color: #2a3a9c;
+}
+
+.form-error {
+  color: #ff6b6b;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+

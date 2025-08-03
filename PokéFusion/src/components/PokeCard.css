@@ -1,0 +1,203 @@
+:root {
+  /* Pokémon Type Colors */
+  --type-normal: #A8A878;
+  --type-fire: #F08030;
+  --type-water: #6890F0;
+  --type-electric: #F8D030;
+  --type-grass: #78C850;
+  --type-ice: #98D8D8;
+  --type-fighting: #C03028;
+  --type-poison: #A040A0;
+  --type-ground: #E0C068;
+  --type-flying: #A890F0;
+  --type-psychic: #F85888;
+  --type-bug: #A8B820;
+  --type-rock: #B8A038;
+  --type-ghost: #705898;
+  --type-dragon: #7038F8;
+  --type-dark: #705848;
+  --type-steel: #B8B8D0;
+  --type-fairy: #EE99AC;
+  
+  /* Base Colors */
+  --pokemon-blue: #2c3e50;
+  --pokemon-yellow: #ffde00;
+  --pokemon-red: #ff6b6b;
+  --text-light: rgba(255, 255, 255, 0.7);
+  --shadow-dark: rgba(0, 0, 0, 0.5);
+}
+
+/* Base Card Styles */
+.poke-card {
+  width: 380px;
+  border-radius: 15px;
+  height: 625px;
+  padding: 1.5rem;
+  margin: 1rem;
+  background: var(--pokemon-blue);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: visible;
+  border-top: 5px solid var(--type-color, var(--type-normal));
+  font-size: 2rem;
+}
+
+/* Type-based classes */
+.poke-card.type-normal { --type-color: var(--type-normal); }
+.poke-card.type-fire { --type-color: var(--type-fire); }
+.poke-card.type-water { --type-color: var(--type-water); }
+.poke-card.type-electric { --type-color: var(--type-electric); }
+.poke-card.type-grass { --type-color: var(--type-grass); }
+.poke-card.type-ice { --type-color: var(--type-ice); }
+.poke-card.type-fighting { --type-color: var(--type-fighting); }
+.poke-card.type-poison { --type-color: var(--type-poison); }
+.poke-card.type-ground { --type-color: var(--type-ground); }
+.poke-card.type-flying { --type-color: var(--type-flying); }
+.poke-card.type-psychic { --type-color: var(--type-psychic); }
+.poke-card.type-bug { --type-color: var(--type-bug); }
+.poke-card.type-rock { --type-color: var(--type-rock); }
+.poke-card.type-ghost { --type-color: var(--type-ghost); }
+.poke-card.type-dragon { --type-color: var(--type-dragon); }
+.poke-card.type-dark { --type-color: var(--type-dark); }
+.poke-card.type-steel { --type-color: var(--type-steel); }
+.poke-card.type-fairy { --type-color: var(--type-fairy); }
+
+/* ID and Name */
+.pokemon-id {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.25rem;
+  color: var(--text-light);
+}
+
+.pokemon-name {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--pokemon-yellow);
+  margin-top: 2.5rem;
+  text-transform: capitalize;
+}
+
+/* Type Badge */
+.type-badge {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  border-radius: 20px;
+  background-color: var(--type-color);
+  color: var(--pokemon-yellow);
+  font-weight: bold;
+  margin: 0 auto 1rem;
+  text-align: center;
+  width: fit-content;
+  text-transform: capitalize;
+}
+
+/* Image Container */
+.pokemon-image-container {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.pokemon-image {
+  height: 220px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px var(--shadow-dark));
+}
+
+/* Stats Section */
+.pokemon-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-row span:first-child {
+  color: var(--text-light);
+}
+
+.stat-value {
+  font-weight: bold;
+  color: white;
+}
+
+/* Meta Information */
+.pokemon-meta {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.pokemon-category {
+  font-weight: bold;
+  color: var(--type-color);
+  margin-bottom: 0.3rem;
+  text-transform: capitalize;
+}
+
+.pokemon-date {
+  font-size: 1.25rem;
+  color: var(--text-light);
+}
+
+/* Action Buttons */
+.card-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.edit-btn, .delete-btn {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 1.25rem;
+  margin-top: 0rem;
+}
+
+.edit-btn {
+  background-color: var(--pokemon-yellow);
+  color: var(--pokemon-blue);
+}
+
+.delete-btn {
+  background-color: var(--pokemon-red);
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #f5d000;
+  transform: translateY(-2px);
+}
+
+.delete-btn:hover {
+  background-color: #ff5252;
+  transform: translateY(-2px);
+}
+
+.type-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5px 0;
+}

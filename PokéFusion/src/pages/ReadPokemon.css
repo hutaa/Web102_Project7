@@ -1,0 +1,26 @@
+/* ReadPokemon.css */
+.pokemon-list {
+  padding: 0; /* Remove all padding */
+  min-height: 100vh;
+}
+
+.pokemon-list h1 {
+  color: #ffde00;
+  margin: 0 0 1rem 0; /* Top margin set to 0 */
+  padding: 1rem 0 0 0; /* Only add padding to top if needed */
+  font-size: 3rem;
+  text-align: center;
+}
+
+.card-grid {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 11rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 60px;
+
+}
